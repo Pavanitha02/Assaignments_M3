@@ -44,3 +44,26 @@ function App() {
 }
 
 export default App;
+
+import { useState } from "react";
+import TodosList from "./TodosList";
+
+function App() {
+  const [showTodos, setShowTodos] = useState(true);
+
+  const unmountTodos = () => {
+    setShowTodos(false);
+  };
+
+  return (
+    <div>
+      <button onClick={unmountTodos}>
+        Unmount Todos
+      </button>
+
+      {showTodos && <TodosList />}
+    </div>
+  );
+}
+
+export default App;
