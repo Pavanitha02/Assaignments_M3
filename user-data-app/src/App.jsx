@@ -9,3 +9,14 @@ function App() {
 }
 
 export default App;
+import Counter from "./Counter";
+
+function App() {
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
+}
+
+export default App;
